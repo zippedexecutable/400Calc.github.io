@@ -19,6 +19,7 @@
   <h2>Set Up</h2>
 
   <!-- Dropdown for saved configurations -->
+		<form id="data-form">
   <div class="form-group">
 	<label for="configurations">Saved Configurations:</label>
 	<select id="configurations" onchange="loadConfiguration()">
@@ -67,13 +68,14 @@
   <div class="form-group">
 	<label for="order_qty">Order Quantity:</label>
 	<input type="number" step="1" id="order_qty" value="0">
-
 </div>
+
+
 				
     
 
 	<button class="button" onclick="calculate()">Calculate</button>
-
+</form>
 	<div class="output" id="output"></div>
 	
 	
