@@ -15,7 +15,11 @@
 -->
 <script src="ConfigExport.js"></script>
 <script src="fetch_csv.js"></script>
-
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  await fetchCsv();
+});
+</script>
 </head>
 <body>
 	<h1><b><i>The</i> 400 Part Calculator</b></h1>
