@@ -1,6 +1,5 @@
-document.getElementById("data-form").addEventListener("submit", async (e) => {
-  e.preventDefault();
-
+// This function will be called when the button is clicked
+async function saveConfiguration() {
   const formData = {
     config_name: document.getElementById("config_name").value,
     work_number: document.getElementById("work_number").value,
@@ -34,4 +33,4 @@ document.getElementById("data-form").addEventListener("submit", async (e) => {
     console.error("Error:", error);
     alert("Error submitting data.");
   }
-});
+}
