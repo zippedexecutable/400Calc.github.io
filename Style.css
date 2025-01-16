@@ -1,0 +1,180 @@
+		h1 {
+			background-color: #162447;
+			padding:10px 0px;
+			border: 3px solid rgba(245, 230, 202, 0.3);
+			border-radius: 12px;
+			box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+			border: 3px solid rgba(245, 230, 202, 0.3);
+			text-align: center;
+			font-size: 30px;
+			text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+			width:98%;
+			z-index: 3;
+		}
+		h2 {
+			color: #f5e6ca;
+			position: relative;
+			font-weight: 600;
+			text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+			z-index: 3;
+		}
+		body {
+			position: relative;
+			font-family: "Inconsolata", serif;
+			font-optical-sizing: auto;
+			font-weight: 300;
+			font-style: normal;
+			font-variation-settings: "wdth" 100;
+			margin: 20px;
+			padding: 10px;
+			padding-bottom: 40px;
+			color: #f5e6ca;
+			background: linear-gradient(
+				120deg,
+				#1f4068 0%,
+				#3B587B 25%,
+				#2D1647 50%,
+				#3B587B 75%,
+				#1f4068 100%
+			);
+			background-size: 2000% 2000%; /* Enlarges the gradient for scrolling */
+			animation: scrollGradient 30s linear infinite; /* Smooth scrolling effect */
+			text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+			z-index: 3;
+			}
+
+/* Keyframes for scrolling background animation */
+		@keyframes scrollGradient {
+			0% {
+			background-position: 0% 50%; /* Start position */
+			}
+			100% {
+			background-position: 100% 50%; /* End position */
+			}
+			}
+
+		.form-group {
+			color: #f5e6ca;
+			position: relative;
+			margin-bottom: 10px;
+			z-index: 2;
+
+		}
+		.form-group label {
+			color:#f5e6ca;
+			position: relative;
+			width: 47%;
+			display: inline-block;
+			text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+			z-index: 2;
+
+		}
+		.form-group input {
+			color:#f5e6ca;
+			width: 47%;
+			background-color: #1f4068;
+			color: #ffd79a;
+			margin-bottom: 10px;
+			box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+
+		}
+		table {
+			margin-top: 10px;
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 20px;
+			background-color: #1f4068;
+			opacity: 1;
+			
+		}
+		th, td {
+			width: 50%;
+			padding: 8px;
+			text-align: left;
+			font-weight: 300;
+			border: 1px solid #ddd;
+			background-color: #1f4068;
+			box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+		}
+		.red {
+			padding: 8px;
+			text-align: left;
+			font-weight: 800;
+			border: 1px solid #ddd;
+			background-color: #e43f5a;
+		}
+		th {
+			background-color: #162447;
+			font-weight: 800;
+		}
+		.output {
+			color:#f5e6ca;
+			background-color: #162447;
+			padding:0px 5px;
+			border: 3px solid rgba(245, 230, 202, 0.3);
+			border-radius: 12px;
+			box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+			border: 3px solid rgba(245, 230, 202, 0.3);
+			position: relative;
+			/*margin-top: 20px;*/
+			margin-bottom: 2.5px;
+			z-index: 3;
+			opacity: 0;
+			transform: translateY(-150px); /* Start offscreen */
+			transition: transform 1s ease-out, opacity 1s ease-out;
+			padding-bottom: 20px;
+}
+
+		.output.show {
+			opacity: 1;
+			transform: translateY(0); /* Slide into position */
+}
+		.button {
+			box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+			border: 3px solid rgba(245, 230, 202, 0.3);
+			position: relative;
+			opacity: .75;
+			background-color: #162447; 
+			font-weight: 300;
+			color: #f5e6ca;
+			padding: 20px;
+			text-align: center;
+			text-decoration: none;
+			z-index:1;
+			font-size: 20px;
+			left: 0;
+			cursor: pointer;
+			width: 100%;
+			border-radius: 12px;
+			margin-bottom: 2.5px;
+			}
+		.footer {
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			background-color: #1f4068;
+			color: f5e6ca;
+			text-align: center;
+			z-index: 4;
+		}
+		.all_forms{
+			background-color: #162447;
+			padding:0px 5px;
+			border: 3px solid rgba(245, 230, 202, 0.3);
+			border-radius: 12px;
+			box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+			border: 3px solid rgba(245, 230, 202, 0.3);
+		}
+		.hidden {
+			opacity: 0;
+			transform: translateY(-20px);
+			transition: opacity 0.5s ease, transform 0.5s ease;
+			pointer-events: none; /* Prevent interaction before animation */
+		}
+
+		.visible {
+			opacity: 1;
+			transform: translateY(0);
+			pointer-events: auto; /* Allow interaction after animation */
+		}
