@@ -15,7 +15,7 @@ async function saveConfiguration() {
 
   console.log("Form data being sent:", formData); // Log the form data to check
 
-  const apiUrl = "https://ppzkq5wi5e.execute-api.us-east-2.amazonaws.com/"; // Replace with your actual API Gateway URL.
+  const apiUrl = "https://ppzkq5wi5e.execute-api.us-east-2.amazonaws.com/beta"; // Replace with your actual API Gateway URL.
 
   try {
     const response = await fetch(apiUrl, {
