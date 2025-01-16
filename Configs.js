@@ -26,8 +26,7 @@
   }
 ];
 
-window.onload = function() {
-	const select = document.getElementById("configurations");
+
 
 configurations.forEach((config, index) => {
 	  const option = document.createElement("option");
