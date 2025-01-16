@@ -35,56 +35,6 @@ configurations.forEach((config, index) => {
 	  select.appendChild(option);
 	});
   };
-
-  
-
-  function saveConfiguration() {
-	const configName = document.getElementById("config_name").value;
-	if (!configName) {
-	  alert("Please enter a Part Number to save the configuration.");
-	  return;
-	}
-	if (isNaN(bar_length) || isNaN(part_length) || isNaN(part_off) ||
-      isNaN(extra) || isNaN(extra_s) || isNaN(leftover) || isNaN(zero) || isNaN(order_qty)) {
-    alert("Please enter valid numbers for all fields.");
-    return;
-  }
-		  // Prepare data
-  const data = {
-    part_number,
-    bar_length,
-    part_length,
-    part_off,
-    extra,
-    extra_s,
-    leftover,
-    zero,
-    order_qty
-  };
-
- try {
-    // Send data to the backend
-    const response = await fetch('https://four00calcbackend.onrender.com', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
-
-    const result = await response.json();
-    if (response.ok) {
-      console.log(result.message);
-      alert("Data saved successfully!");
-    } else {
-      console.error(result.error);
-      alert("Failed to save data: " + result.error);
-    }
-  } catch (error) {
-    console.error('Error:', error);
-    alert("An error occurred while saving data.");
-  }
-}
 		
 		
 		
