@@ -51,6 +51,7 @@ document.querySelectorAll('input').forEach(input => {
 	ctx.strokeRect(canvasWidth - leftoverWidth, 0, leftoverWidth, canvasHeight);
 }
 	function calculate() {
+		event.preventDefault();
 	// Get input values
 	const bar_length = parseFloat(document.getElementById("bar_length").value);
 	const leftover = parseFloat(document.getElementById("leftover").value);
