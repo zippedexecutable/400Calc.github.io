@@ -1,5 +1,5 @@
 async function fetchCsv() {
-  const csvUrl = "https://your-s3-bucket-url/data.csv"; // Replace with your S3 bucket URL
+  const csvUrl = "https://400-csv-storage.s3.us-east-2.amazonaws.com/data.csv"; // Replace with your S3 bucket URL
 
   try {
     const response = await fetch(csvUrl);
