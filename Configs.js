@@ -1,4 +1,4 @@
-// Array to store configurations
+  // Array to store configurations
   let configurations = [
   {
 	name: "57.SV9C.418.RRU1 R4",
@@ -36,9 +36,16 @@ configurations.forEach((config, index) => {
 	  select.appendChild(option);
 	});
   };
-		
-		
-		
+
+  
+
+  function saveConfiguration() {
+	const configName = document.getElementById("config_name").value;
+	if (!configName) {
+	  alert("Please enter a Part Number to save the configuration.");
+	  return;
+	}
+
 	// Get form values
 	const config = {
 	  name: configName,
@@ -91,7 +98,7 @@ configurations.forEach((config, index) => {
  function generateFormattedText() {
   const inputs = {
   "name": `"${document.getElementById("config_name").value}",`,
-  "work_number": `${document.getElementById("work_number").value},`,
+	"work_number": `${document.getElementById("work_number").value},`,
   "bar_length": `${document.getElementById("bar_length").value},`,
   "part_length": `${document.getElementById("part_length").value},`,
   "part_off": `${document.getElementById("part_off").value},`,
