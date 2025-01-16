@@ -13,8 +13,6 @@ async function saveConfiguration() {
     order_qty: document.getElementById("order_qty").value,
   };
 
-  console.log("Form data being sent:", formData); // Log the form data to check
-
   const apiUrl = "https://ppzkq5wi5e.execute-api.us-east-2.amazonaws.com/"; // Replace with your actual API Gateway URL.
 
   try {
@@ -29,8 +27,6 @@ async function saveConfiguration() {
     if (response.ok) {
       alert("Data submitted successfully!");
     } else {
-      const errorText = await response.text();
-      console.error("Failed to submit data:", errorText);
       alert("Failed to submit data.");
     }
   } catch (error) {
