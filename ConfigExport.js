@@ -14,7 +14,7 @@ document.getElementById("data-form").addEventListener("submit", async (e) => {
     order_qty: document.getElementById("order_qty").value,
   };
 
-  const apiUrl = "https://your-api-gateway-url"; // Replace with your actual API Gateway URL.
+  const apiUrl = "https://ppzkq5wi5e.execute-api.us-east-2.amazonaws.com/"; // Replace with your actual API Gateway URL.
 
   try {
     const response = await fetch(apiUrl, {
